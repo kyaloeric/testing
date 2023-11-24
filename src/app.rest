@@ -1,0 +1,52 @@
+###
+POST http://localhost:4000/users/register
+Content-Type: application/json
+
+{
+    "fullName": "Eric  Kyalo",
+    "email": "erickyalo19@gmail.com",
+    "password": "12345678",
+    "cohortNumber": "23"
+}
+
+
+### login 
+POST http://localhost:4000/users/login
+Content-Type: application/json
+
+{
+   "email": "ricskyalo2@gmail.com",
+   "password": "12345678" 
+}
+
+### fetching users
+
+GET http://localhost:4000/users/
+token:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiJjOGY3ZmE2ZS0wZGJjLTQ1MTYtOGM1ZC1kNjFiYzE0MmY0MzAiLCJmdWxsTmFtZSI6Ikt5YWxvIEVyaWMiLCJlbWFpbCI6InJpY3NreWFsbzJAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MDAzODcyNjgsImV4cCI6MTcwMDU2MDA2OH0.Ou7nEvAEOMNAG1ujAJM3P89C716To8-H-muog9OwdxQ
+
+
+### fetching user by ID
+GET http://localhost:4000/users/details/c8f7fa6e-0dbc-4516-8c5d-d61bc142f430/
+token:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiJjOGY3ZmE2ZS0wZGJjLTQ1MTYtOGM1ZC1kNjFiYzE0MmY0MzAiLCJmdWxsTmFtZSI6Ikt5YWxvIEVyaWMiLCJlbWFpbCI6InJpY3NreWFsbzJAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MDA0NzMwMTIsImV4cCI6MTcwMDY0NTgxMn0.4Nu-apB5Ce6ewyZj363_KH8cuRTM0exOiVn1ccOTkok
+
+
+### checking user details
+GET http://localhost:4000/users/checkUserDetails/
+token:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiJjOGY3ZmE2ZS0wZGJjLTQ1MTYtOGM1ZC1kNjFiYzE0MmY0MzAiLCJmdWxsTmFtZSI6Ikt5YWxvIEVyaWMiLCJlbWFpbCI6InJpY3NreWFsbzJAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MDAwNTA3OTksImV4cCI6MTcwMDIyMzU5OX0.jIZq28Ul-XZKl_paGhdnjwY0Ruwix_0U4lw_WErvxSA
+
+## Delete User 
+DELETE http://localhost:4000/users/delete/
+
+
+
+#### editign user
+
+PUT http://localhost:4000/users/edit/13356d87-6274-40a9-8a7e-2ce606d91ce5
+Content-Type: application/json
+
+{
+   "fullName": "Eric  Kyalo",
+    "email": "erickyalo19@gmail.com",
+    "password": "12345678",
+    "cohortNumber": "23"
+}

@@ -1,0 +1,17 @@
+-- -- USE JClub
+
+-- CREATE OR ALTER PROCEDURE GetUserDetails(
+--     @userID VARCHAR(100)
+-- )
+-- AS
+-- BEGIN
+--     SELECT
+--         userID,
+--         fullName,
+--         email,
+--         cohortNumber
+--     FROM
+--         Users
+--     WHERE
+--         userID = @userID;
+-- END;
