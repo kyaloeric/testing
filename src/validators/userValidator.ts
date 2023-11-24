@@ -4,15 +4,17 @@ let joi =Joi
 
 export const regUserValidation = Joi.object({
     fullName: Joi.string().required().min(3).max(30),
-    email : Joi.string().required().email({
-        minDomainSegments:2, tlds:{
+    email: Joi.string().required().email({
+        minDomainSegments: 2,
+        tlds: {
             allow: ['com', 'ke']
         }
-    }),
+    }).regex(/^[a-zA-Z]+\.[a-zA-Z]+@thejitu\.com$/).message('Email must have the format fname.lname@thejitu.com'),
     password: Joi.string().required().pattern(
         new RegExp('^[a-zA-Z0-9!@#$%^&*()]{3,30}$')
     )
-})
+});
+
 
 export const loginUserValidation=Joi.object({
     email: Joi.string().required().email({
@@ -25,7 +27,6 @@ export const loginUserValidation=Joi.object({
     )
 
 })
-
 
 
 
